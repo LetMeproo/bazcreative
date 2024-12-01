@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap');
+
+
+body {
+    font-family: 'Zain', sans-serif !important;
+}
+
+
+/* .accordion-header {
+    background-color: #fa0202; 
+    color: #fff; 
+    
+}
+
+.accordion-header .accordion-button {
+    background-color: transparent; 
+    color: #fff; 
+    border: none; 
+}
+
+.accordion-header .accordion-button:focus {
+    box-shadow: none;
+} */
+
+
+
+
+.accordion-header {
+    display: flex;
+    justify-content: center; /* توسيط أفقي */
+    align-items: center; /* توسيط عمودي */
+    background-color: #f8f9fa; /* لون خلفية للهيدر لتحسين التصميم */
+    padding: 1rem; /* مسافة داخلية للهيدر */
+    border-radius: 5px; /* تقويس الحواف */
+    
+}
+
+.accordion-header h1 {
+    font-family: 'Zain', sans-serif; /* استخدام الخط المخصص */
+    font-size: 1.5rem; /* تكبير حجم الخط */
+    color: #fa0202; /* لون النص */
+    margin: 0; /* إزالة المسافات الافتراضية */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fa0202; /* لون للخلفية عند التفعيل */
+    color: #212529; /* لون النص عند التفعيل */
+    box-shadow: none; /* إزالة الظل */
+}
+
+.accordion-button {
+    outline: none;
+    border: none;
+}
+

@@ -1,0 +1,463 @@
+/* Zain font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap');
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: "Zain", serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    /* height: 5000px; */
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, rgba(250, 2, 2, 0) 0%, rgba(250, 2, 2, 1) 100%);
+
+
+}
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(250, 2, 2, 0) 0%, rgb(211, 208, 208) 100%);
+}
+
+.logo-container .logo {
+    max-height: 70px;
+    width: auto;
+    margin-left: 12px;
+}
+
+.links-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 12px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+
+.nav-link:hover {
+    color: #fa0202;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu i {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    .links-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .links-nav.active {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 10px 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+        margin-right: 12px;
+    }
+}
+
+
+
+header {
+    margin-top: 50px;
+    text-align: center;
+    min-height: 200px; /* Minimum height to reserve space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  h1 {
+    font-size: 5vw; /* Responsive size */
+    font-weight: bold;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff;
+    display: inline-block;
+    animation: blink-caret 0.5s step-end infinite;
+    line-height: 1.2; /* Ensure proper vertical alignment */
+  }
+  
+ /* Media Queries for smaller devices */
+@media (max-width: 768px) {
+    header {
+      min-height: 120px; /* Slightly larger space on smaller screens */
+    }
+    h1 {
+      font-size: 6vw;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      min-height: 150px; /* Larger space for very small devices */
+    }
+    h1 {
+      font-size: 8vw;
+    }
+  }
+  
+  /* Caret Animation */
+  @keyframes blink-caret {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Slider Container */
+  .slider-container {
+    width: 100%; /* استخدم العرض الكامل */
+    overflow-y: visible; /* السماح بالتمرير العمودي إذا لزم الأمر */
+    overflow-x: hidden; /* إخفاء التمرير الأفقي فقط */
+    display: flex;
+    min-height: 700px;
+    flex-direction: row; /* عرض الكروت عمودياً عند الحاجة */
+    align-items: center;
+    z-index: 999;
+    position: relative;
+}
+  
+  /* Slider */
+  .slider {
+    display: flex;
+    /* flex-wrap: wrap;  */
+    
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px; /* إضافة مسافة بين الكروت */
+    overflow: visible; /* السماح بالتمرير الكامل */
+}
+  
+  /* Slides */
+  .slide {
+    min-width: 200px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slide img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .slide p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+
+    .slide {
+        width: 100%; /* الكرت يأخذ العرض الكامل */
+        max-width: 95%; /* مع ترك مسافة بسيطة */
+        margin-bottom: 10px;
+    }
+    .slider{
+        flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slide {
+      min-width: 120px;
+    }
+  }
+  
+
+
+/* ------------------ */
+
+
+
+
+/* Card Animation for Mobile */
+@media (max-width: 768px) {
+    
+
+    .slider {
+      flex-direction: column;
+      margin-left: 15px;
+      
+    }
+  
+    .slide {
+      opacity: 0;
+      transform: translateX(100%);
+      animation: slide-in-right 0.5s forwards;
+      margin-bottom: 20px;
+    }
+  
+    .slide:nth-child(even) {
+      animation: slide-in-left 0.5s forwards;
+    }
+  
+    /* Ensure animations run sequentially */
+    .slide:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .slide:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .slide:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    .slide:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+  }
+  
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* ------- */
+
+
+/* تنسيق الأسهم */
+.arrow {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    margin-bottom: 50px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10; /* لضمان ظهور الأسهم فوق السلايدر */
+    transition: background-color 0.3s;
+}
+
+
+/* السهم الذي ينقل لليسار */
+.arrow.left {
+    left: 10px; /* يظهر على الجانب الأيسر */
+}
+
+/* السهم الذي ينقل لليمين */
+.arrow.right {
+    right: 10px; /* يظهر على الجانب الأيمن */
+}
+
+/* تنسيق الأيقونات */
+.arrow i {
+    font-size: 24px; /* حجم الأيقونة */
+    color: #fa0202; /* لون الأيقونة */
+}
+
+@media (max-width: 768px){
+    .arrow{
+        display: none;
+    }
+}
+
+
+/* ------------- */
+/* تنسيق الزر */
+.download-btn {
+    background-color: #000; /* لون الزر */
+    color: #f3f3f3; /* لون النص */
+    border: none; /* إزالة الحدود */
+    border-radius: 5px; /* حواف دائرية */
+    padding: 15px 30px; /* مساحة داخلية */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: "Zain", serif;
+    font-size: 18px; /* حجم النص */
+    cursor: pointer; /* تغيير شكل مؤشر الفأرة */
+    transition: background-color 0.3s ease; /* تأثير عند التمرير */
+}
+
+.download-btn:hover {
+    background-color: #f3f3f3; /* تغيير اللون عند التمرير */
+    color:#000;
+}
+@media (max-width: 768px){
+    .download-btn{
+        margin-bottom: 50px;
+    }
+}
+
+
+/* قسم وسائل التواصل */
+.social-media-section {
+    text-align: center;
+    padding: 50px 20px;
+    /* margin-bottom: 100px; */
+    color: black;
+    position: relative;
+    opacity: 0; /* إخفاء القسم في البداية */
+    transform: translateY(100px); /* جعله أسفل */
+    transition: all 1s ease; /* تأثير الانتقال */
+}
+
+.social-media-section.active {
+    opacity: 1; /* إظهاره عند التمرير */
+    transform: translateY(0); /* رفعه إلى موضعه */
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.folow{
+    font-size: 25px;
+    color: #f3f3f3;
+    margin-bottom: -30px;
+}
+.social-icons .icon {
+    font-size: 25px;
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.2);
+    color: #f3f3f3;
+}
+
+/*   تصميم زر الواتساب*/
+#whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* background-color: #25D366; */
+    color: #000;
+    /* border-radius: 20%; */
+    padding: 15px;
+    font-size: 50px;
+    display: none; /* إخفاء الزر في البداية */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+    z-index: 1000;
+}
+
+#whatsapp-btn i {
+    pointer-events: none;
+}
+
+/* تأثير عند التمرير */
+#whatsapp-btn.show {
+    display: block;
+}
+
+
+/* تأثير عند ظهور الزر */
+#whatsapp-btn.show {
+    display: block;
+    right: 20px; /* جعل الزر يظهر في الجنب بعد التمرير */
+    animation: slideIn 0.5s forwards; /* إضافة حركة الانيميشن */
+}
+
+/* حركة الانيميشن */
+@keyframes slideIn {
+    0% {
+        right: -100px; /* الزر يكون مخفي على الجنب */
+    }
+    100% {
+        right: 20px; /* الزر يظهر على الجنب بعد التمرير */
+    }
+}
+
+.custom{
+    background: linear-gradient(to bottom, rgba(250, 2, 2, 0) 0%, rgb(211, 208, 208) 100%);
+    color: #fa0202; /* لون النص */
+    border: none; /* إزالة الإطار */
+    transition: all 0.3s ease; /* تأثير الحركة */
+    padding: 20px;
+    margin: 6px 12px;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.custom:hover{
+    background-color: #fff; /* لون عند التمرير */
+    color: #000;
+}
+
